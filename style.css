@@ -1,0 +1,562 @@
+/* fonts */  
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@300;500;600;700;800;900&display=swap');
+
+/* font-family: 'Lato', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+:root{
+    --footerColor: #102A42;
+    --serviceIcon: #044E53;
+    --primary: #2CAEBA;
+    --mainWhite: #fff;
+    --offWhite: #f7f7f7;
+    --mainBlack: #222;
+    --mainGrey: #ececec;
+    --darkGrey: #617D98;
+    --mainTransition: all 0.3s linear;
+    --mainSpacing: 0.25rem;
+    --lightShadow: 2px 5px 3px 0px rgba(0, 0, 0, 0.25);
+    --darkShadow: 4px 10px 5px 0px rgba(0, 0, 0, 0.5);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+a{
+    text-decoration: none;
+}
+
+section{
+    padding: 3rem 5%;
+    width: 100vw;
+}
+
+/*navigation*/
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 5%;
+    background-color: var(--mainWhite);
+    box-shadow: var(--lightShadow);
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 0.75rem;
+}
+
+.nav-list a{
+    text-decoration: none;
+    color: var(--mainBlack);
+    font-size: 1.05rem;
+    letter-spacing: var(--mainSpacing);
+}
+
+.nav-list a:hover{
+    color: var(--primary);
+}
+
+.nav-icons{
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.nav-icons a{
+    font-size: 1.3rem;
+    color: var(--primary);
+}
+
+.nav-icons a:hover{
+    color: var(--primary);
+    opacity: 0.5;
+}
+
+/*header image*/
+
+header{
+    background:Linear-gradient(rgba(63, 208, 212, 0.7), rgba(0, 0, 0, 0.7)), url(./images/main.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.hero-text{
+    margin: auto;
+    width: 60%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: var(--mainWhite);
+}
+
+.hero-text h2{
+    font-size: 3rem;
+    letter-spacing: var(--mainSpacing);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.hero-text p{
+    font-size: 0.9rem;
+    font-weight:300;
+    letter-spacing: var(--mainSpacing);
+    font-family: 'Poppins', sans-serif ;
+}
+
+.hero-text button {
+    text-transform: uppercase;
+    border: none;
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+.hero-text button a{
+    color: var(--primary);
+    font-size: 1.5rem;
+    letter-spacing: var(--mainSpacing);
+}
+
+.hero-text button:hover{
+    border: 3px solid var(--mainWhite);
+    background-color: transparent;
+}
+
+/* about us */
+
+.about-us{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 1.5rem 0;
+}
+
+.headings{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: var(--mainSpacing);
+    font-weight: 600;
+}
+
+.headings span{
+    color: var(--primary);
+}
+
+.about-us .img-wrapper{
+    flex-basis: 65rem;
+    height: 27rem;
+    border: 0.5rem solid var(--primary);
+    position: relative;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+}
+
+.about-text h4{
+    letter-spacing: var(--mainSpacing);
+    font-size: 1.8rem;
+    opacity: 0.8;
+    padding-bottom: 1rem;
+}
+
+.about-text p{
+    letter-spacing: 0.06rem;
+    padding-bottom: 1.2rem;
+    font-weight: 500;
+    color: var(--darkGrey);
+    font-size: 0.9rem;
+}
+
+.about-text button{
+    border: none;
+    background-color: var(--primary);
+    padding: 0.7rem 0.5rem;
+}
+
+.about-text button:hover{
+    transition: var(--mainTransition);
+    opacity: 0.7;
+}
+
+.about-text button a{
+    text-transform: uppercase;
+    font-size: 1rem;
+    color: var(--mainWhite);
+    letter-spacing: var(--mainSpacing);
+}
+
+.about-text button a:hover{
+    font-weight: 600;
+    color: var(--mainBlack);
+}
+/* services */
+#services{
+    background-color: var(--mainGrey);
+}
+
+.services-wrapper{
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 0;
+}
+
+.wrapper{
+    display: flex;
+    gap: 1rem;
+}
+
+.wrapper span{
+    color: var(--serviceIcon);
+    background-color: var(--primary);
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+.service-text h4{
+    letter-spacing: var(--mainSpacing);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+
+.service-text p{
+    letter-spacing: 0.06rem;
+    padding-top: 0.5rem;
+    font-weight: 500;
+    color: var(--darkGrey);
+    font-size: 0.9rem;
+}
+
+
+/* featured tour */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 2.5rem;
+    padding: 1.5rem 0;
+}
+
+.date-img-1{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-image: url(./images/tour-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.date-img-2{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-image: url(./images/tour-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.date-img-3{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-image: url(./images/tour-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.date-img-4{
+    position: relative;
+    width: 100%;
+    height: 20rem;
+    background-image: url(./images/tour-4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card span{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: var(--primary);
+    padding: 0.5rem;
+}
+
+.card{
+    width: 22rem;
+    box-shadow: var(--lightShadow);
+}
+
+.card-wrapper{
+    background-color: var(--mainGrey);
+    padding: 1rem 1.5rem;
+}
+
+.card-heading h4{
+    letter-spacing: var(--mainSpacing);
+}
+
+.card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-heading p, .desc{
+    color: var(--darkGrey);
+}
+
+.desc{
+    padding: 1rem 0;
+}
+/* 
+.card-wrapper p{
+
+} */
+
+.card-location{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem ;
+    margin-right: 0;
+    color: var(--primary);
+}
+
+.card-location p i{
+    padding-right: 0.3rem;
+}
+
+.card-location p{
+    text-transform: capitalize;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0;
+}
+
+.btn button{
+    padding: 0.8rem 1rem;
+    border: none;
+    background-color: var(--primary);
+    color: var(--mainWhite);
+    letter-spacing: var(--mainSpacing);
+    text-transform: uppercase;
+}
+
+.btn button:hover{
+    background-color: var(--primary);
+    opacity: 0.8;
+    color: var(--mainBlack);
+}
+
+
+
+/* newsletter */
+
+#newsletter{
+    background-color: var(--primary);
+    
+}
+
+.newsletter{
+    display: flex;
+    /* gap: 0rem; */
+    align-items: center;
+    justify-content: center;
+    padding: 1.8rem 0;
+}
+
+.tour-info{
+    width: 50%;
+    
+}
+
+.tour-info h5{
+    letter-spacing: var(--mainSpacing);
+    font-size: 1.6rem;
+    color: var(--mainWhite);
+}
+
+.tour-info p{
+    color: var(--mainGrey);
+    font-size: 0.8rem;
+    font-weight: normal;
+    padding-top: 0.7rem;
+}
+
+.email{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    gap: 0.5rem;
+}
+
+.email input{
+    width: 70%;
+    font-size: 1.2rem;
+    font-weight: normal;
+    border: none;
+    letter-spacing: var(--mainSpacing);
+    padding: 0.5rem;
+}
+
+.email button{
+    border: none;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    text-transform: capitalize;
+    letter-spacing: var(--mainSpacing);
+    background-color: var(--serviceIcon);
+    opacity: 0.8;
+    color: var(--mainWhite);
+}
+
+/* gallery */
+#gallery{
+    padding: 0;
+    margin: 0;
+}
+
+.img-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    margin: 0;
+}
+
+.img-container div{
+    width: 20rem;
+    height: 15rem;
+}
+
+#img-1{
+    position: relative;
+    background-image: url(./images/tour-1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-2{
+    position: relative;
+    background-image: url(./images/tour-2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-3{
+    position: relative;
+    background-image: url(./images/tour-3.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-4{
+    position: relative;
+    background-image: url(./images/tour-4.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-5{
+    position: relative;
+    background-image: url(./images/tour-5.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-6{
+    position: relative;
+    background-image: url(./images/tour-6.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#img-1 a i, #img-2 a i, #img-3 a i, #img-4 a i, #img-5 a i, #img-6 a i{
+    color: var(--mainWhite);
+    font-size: 1.5rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+footer{
+    background-color: var(--footerColor);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.footer-list{
+    padding-bottom: 1rem;
+}
+
+.footer-list a{
+    text-transform: capitalize;
+    text-decoration: none;
+    color: var(--mainWhite);
+    padding-right: 0.8rem;
+    letter-spacing: var(--mainSpacing);
+}
+
+.footer-icons{
+    padding: 2rem 0;
+}
+
+.footer-icons a i{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: var(--mainWhite);
+    padding-right: 0.8rem;
+}
+
+.copyright-right p{
+    letter-spacing: var(--mainSpacing);
+    color: var(--mainWhite);
+    font-size: 1rem;
+}
+
+
+
+
